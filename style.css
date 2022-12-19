@@ -1,322 +1,44 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  font-size: 62.5%;
-
-  --list-color: #06181C;
-  --button-color: #065E7C;
-  --text-color: #E1E1E6;
-  --odd-color: rgba(6, 22, 27, 0.5);
-  --even-color: #06181C;
-  --thead-color: #092D38;
-}
-
-body {
-  font-size: 1.6rem;
-  background-color: black;
-  color: white;
-}
-
-#page {
-  max-width: 1120px;
-
-  margin: 105px auto 0;
-  text-align: center;
-
-  padding: 2rem;
-}
-
-header {
-  display: flex;
-
-  align-items: center;
-  justify-content: space-between;
-
-  margin-bottom: 87px;
-}
-
-@media (max-width: 740px) {
-
-  #page {
-    padding: 0;
-  }
-
-  header h1 {
-    display: none;
-  }
-
-  .search {
-    width: 100%;
-  }
-
-  .search input {
-    width: 100%;
-  }
-
-  .search button {
-    width: 100%;
-
-    justify-content: center;
-  }
-}
-
-.search {
-  /* display: flex; */
-
-  gap: 10px;
-  min-width: 300px;
-}
-
-.search input {
-
-  width: 100%;
-  padding: 16px;
-
-  border-radius: 5px;
-  border: none;
-  outline: none;
-
-  background-color: var(--list-color);
-  color: var(--text-color);
-} 
-
-.search button {
-  width: 100%;
-
-  justify-content: center;
-
-  padding: 12px 32px;
-  text-transform: uppercase;
-
-  background-color: var(--button-color);
-  color: var(--text-color);
-
-  border: none;
-  border-radius: 5px;
-
-  cursor: pointer;
-
-  transition: 300ms;
-
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.search button:hover {
-  background-color: #fff;
-  color: var(--button-color);
-}
-
-.search button:hover svg path {
-  fill: #065E7C;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
-/* .empty {
-  width: 1120px;
-  height: 624px;
-} */
-
-#page {
-  margin-bottom: 50px;
-  margin-top: 50px;
-}
-
-/* .empty tr svg {
-  border: 1px solid red;
-  width: 100%;
-  background-color: white;
-} */
-
-.tittle {
-  padding-top: 50px;
-  text-align: center;
-}
-
-#container-table {
-  overflow-x: auto;
-
-  height: 583px;
-  background: #06181C;
-  border-radius: 12px;
-
-  border: 1px solid #4a808c30;
-}
-
-#container-table.active {
-  background-image: url(./assets/nofavorites.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-table * {
-  color: var(--text-color);
-
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-table {
-  margin: auto;
-  width: 100%;
-
-  border-collapse: collapse;
-  border-radius: 12px;
-
-  box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
-
-  /* min-width: 770px; */
-}
-
-
-table tbody tr {
-  border-bottom: 1px solid   border: 1px solid #4a808c30;;
-}
-
-table thead tr th {
-  padding: 16px 24px 16px 40px;
-  background-color: var(--thead-color);
-  text-align: left;
-}
-
-@media (max-width: 740px) {
-  table thead tr th {
-    padding: 16px 0px 16px 0px;
-    text-align: center;
-  }
-
-  td .user {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  #page {
-    outline: none;
-  }
-}
-
-table thead tr th:first-child {
-  
-}
-
-table tbody tr td {
-  padding: 24px 24px 24px 40px;
-  text-align: left;
-}
-
-@media (max-width: 740px) {
-  table tbody tr td:first-child {
-    padding: 24px 0px 24px 5px;
-  }
-
-  table thead tr th{
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .remove {
-    font-family: 'Times New Roman', Times, serif;
-    padding: 0;
-    margin: auto;
-  }
-
-  #container-table.active {
-    background-image: url(./assets/nofavorites.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-  }
-
-  #container-table {
-    border: none;
-  }
-
-  body {
-    background: #06181C;
-  }
-
-
-}
-
-table tr:nth-child(even) {
-  background-color: var(--odd-color);
-}
-
-table tr:nth-child(odd) {
-  background-color: var(--even-color);
-}
-
-table .remove {
-  border: none;
-  background: transparent;
-  
-  color: #F75A68;
-  
-  cursor: pointer;
-}
-
-.user {
-  display: flex;
-  
-  align-items: center;
-  justify-content: center;
-  
-  gap: 16px;
-}
-
-.user a {
-  text-decoration: none;
-  width: 100%;
-}
-
-.user span {
-  font-weight: 400;
-}
-
-.user img {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-}
-
-/*SCROLL*/
-
-::-webkit-scrollbar {
-  width: 8px;
-  height: 15px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #4A808C;
-  border-radius: 100px;
-}
-
-::-webkit-scrollbar-button:start:decrement {
-  height: 50px;
-  display: block;
-  background-color: transparent;
-}
-
-::-webkit-scrollbar-button:end:increment {
-  height: 10px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitFav</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script defer type="module" src="js/main.js"></script>
+</head>
+<body>
+  <h1 class="tittle">&star; GitFav</h1>
+  <div id="page">
+    <header>
+      <h1></h1>
+      <div class="search">
+        <label class="sr-only" for="input-search">Digite o Github username que quer favoritar</label>
+        <input placeholder="Digite o Github username que quer favoritar" id="input-search" type="text">
+        <button> <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5315 0C11.8564 0 12.1444 0.209195 12.2448 0.518185L14.5139 7.5H22.0315C22.3602 7.5 22.6506 7.71402 22.7479 8.02798C22.8452 8.34193 22.7268 8.68266 22.4557 8.86855L16.3611 13.0477L18.7109 20.0102C18.8153 20.3193 18.7077 20.6605 18.4449 20.854C18.1822 21.0474 17.8244 21.0488 17.5602 20.8573L11.5315 16.4887L5.50288 20.8573C5.23865 21.0488 4.88093 21.0474 4.61815 20.854C4.35537 20.6605 4.24783 20.3193 4.35218 20.0102L6.70201 13.0477L0.607404 8.86855C0.336325 8.68266 0.217864 8.34193 0.315167 8.02798C0.41247 7.71402 0.702861 7.5 1.03155 7.5H8.54918L10.8183 0.518185C10.9187 0.209195 11.2066 0 11.5315 0ZM11.5315 3.17651L9.80732 8.48181C9.7069 8.7908 9.41895 9 9.09405 9H3.45149L8.0182 12.1315C8.29499 12.3213 8.41199 12.6718 8.30467 12.9898L6.52442 18.2646L11.0915 14.9552C11.354 14.7649 11.7091 14.7649 11.9716 14.9552L16.5387 18.2646L14.7584 12.9898C14.6511 12.6718 14.7681 12.3213 15.0449 12.1315L19.6116 9H13.969C13.6441 9 13.3562 8.7908 13.2558 8.48181L11.5315 3.17651Z" fill="white"/>
+          </svg>
+           Favoritar</button>
+      </div>
+    </header>
+    <div id="container-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Usuário</th>
+            <th>Repositorios</th>
+            <th>Seguidores</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
