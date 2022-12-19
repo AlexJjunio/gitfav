@@ -134,7 +134,8 @@ header {
 } */
 
 #page {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 /* .empty tr svg {
@@ -142,6 +143,11 @@ header {
   width: 100%;
   background-color: white;
 } */
+
+.tittle {
+  padding-top: 50px;
+  text-align: center;
+}
 
 #container-table {
   overflow-x: auto;
