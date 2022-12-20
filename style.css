@@ -80,7 +80,7 @@ header {
   border: none;
   outline: none;
 
-  background-color: rgb(0, 0, 0);
+  background-color: #065e7c3f;
   color: var(--text-color);
 } 
 
