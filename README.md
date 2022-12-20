@@ -5,7 +5,7 @@
 </div>
 
 ---
-### Projeto 08 - ⭐ Git Fav
+### Projeto - Git Fav
 - Assincronismo;  
 - Tabelas no HTML;  
 - Screen Reader Only;  
@@ -22,13 +22,4 @@
 </h3> 
 
 </p>
-<img  src="https://i.imgur.com/TrRnX6v.png"  alt="">
 
-### Informações
-📅 **18.10.2022**
-
-🕛 **Status:** Concluído ✔
-
-🌎 **Result Preview: [Veja o Projeto]([universe-spa.netlify.app]([githubfav.netlify.app](https://githubfav.netlify.app/)))**
-
-☑️ **Task:** Desenvolver uma aplicação com várias funcionalidades, [Figma](https://www.figma.com/file/iCey0u5VLRrX55A4MjuilI/%5BDesafios-Explorer%5D-GitFav-(Copy)-(Copy)?node-id=104%3A48).
